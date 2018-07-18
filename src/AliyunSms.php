@@ -49,13 +49,13 @@ class AliyunSms
         $request->setSignName($signName);
         $request->setResourceOwnerAccount($resourceOwnerAccount);
         $request->setTemplateParam(json_encode(array(  // 短信模板中字段的值
-            "code" => rand(10000, 99999),
+            "code" => rand(1000, 9999),
         ), JSON_UNESCAPED_UNICODE));
         $request->setResourceOwnerId($resourceOwnerId);
         $request->setSmsUpExtendCode($smsUpExtendCode);
         return $this->_client->getAcsResponse($request);
 
     }
-    
+
 
 }

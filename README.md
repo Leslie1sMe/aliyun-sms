@@ -4,16 +4,13 @@
 
 使用方法：引入项目文件
 
-use \Leslie\AliyunIot\AliyunIot;
+use \Leslie\AliyunSms\AliyunSms;
 
-$iot = new AliyunIot('accessKey','accessSecret');
+$iot = new AliyunSms('accessKey','accessSecret');
 
-删除设备：
+发送短信：
 
-$iot->deleteDevice('deviceName','productKey');
+$iot->sendSms('templateCode','phoneNumbers','signName');
 
-获取设备状态
-
-$iot->getDeviceStatus('deviceName','productKey');
 
 ...
