@@ -1,0 +1,28 @@
+{
+  "name": "leslie/aliyun-sms",
+  "description": "aliyun-sms",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "lizhonglin",
+      "email": "lizhonglin_melody@yeah.net"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=5.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "Leslie\\AliyunSms\\": "src/",
+      "Leslie\\Sms\\Request\\V20170525\\": "Sms/Request/V20170525",
+      "Leslie\\Sms\\Core\\Auth\\": "Sms/Core/Auth",
+      "Leslie\\Sms\\Core\\Exception\\": "Sms/Core/Exception",
+      "Leslie\\Sms\\Core\\Profile\\": "Sms/Core/Profile",
+      "Leslie\\Sms\\Core\\Request\\": "Sms/Core/Request",
+      "Leslie\\Sms\\Core\\Regions\\": "Sms/Core/Regions",
+      "Leslie\\Sms\\Core\\Autoloader\\": "Sms/Core/Autoloader",
+      "Leslie\\Sms\\Core\\": "Sms/Core/"
+    }
+  }
+}
