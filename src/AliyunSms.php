@@ -41,7 +41,7 @@ class AliyunSms
         $this->_client = new DefaultAcsClient($iClientProfile);
     }
 
-    public function sendSms($templateCode, $phoneNumbers, $signName, $resourceOwnerAccount = null, $templateParam = null, $resourceOwnerId = null, $smsUpExtendCode = null)
+    public function sendSms($code,$templateCode, $phoneNumbers, $signName, $resourceOwnerAccount = null, $templateParam = null, $resourceOwnerId = null, $smsUpExtendCode = null)
     {
         $request = new SendSmsRequest();
         $request->setTemplateCode($templateCode);
@@ -49,7 +49,7 @@ class AliyunSms
         $request->setSignName($signName);
         $request->setResourceOwnerAccount($resourceOwnerAccount);
         $request->setTemplateParam(json_encode(array(  // 短信模板中字段的值
-            "code" => rand(1000, 9999),
+            "code" => $code,
         ), JSON_UNESCAPED_UNICODE));
         $request->setResourceOwnerId($resourceOwnerId);
         $request->setSmsUpExtendCode($smsUpExtendCode);

@@ -1,4 +1,4 @@
-# aliyun-iot
+# aliyun-sms
 2018最新sdk封装composer包
 
 
@@ -10,7 +10,7 @@ $iot = new AliyunSms('accessKey','accessSecret');
 
 发送短信：
 
-$iot->sendSms('templateCode','phoneNumbers','signName');
+$iot->sendSms('code','templateCode','phoneNumbers','signName');
 
 
 ...
